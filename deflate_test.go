@@ -6,7 +6,6 @@ import (
 
 func TestTakeBit(t *testing.T) {
 	for i := 0; i < 256; i++ {
-	//for i := 0; i < 3; i++ {
 		src := []byte{byte(i)}
 		res, err := takeBit(src, 0, 8)
 		if err != nil {

@@ -12,8 +12,8 @@ func takeBit(src []byte, current int, bit int) (uint, error) {
 	value := uint(0)
 	base := uint(1)
 	for max := current + bit; current < max; current++ {
-		bit_pos := uint(current%8)
-		if uint(src[current/8]) >> bit_pos & 1 == 1 {
+		bit_pos := uint(current % 8)
+		if uint(src[current/8])>>bit_pos&1 == 1 {
 			value += base
 		}
 		base = base * 2
